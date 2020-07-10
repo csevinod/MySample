@@ -1,0 +1,32 @@
+<!--
+  Generated template for the MovieresultPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  
+  <ion-navbar color="dark">
+    <ion-title>Movie Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+
+
+<ion-card-content  >
+  <div align="center">
+    <img style="border-radius:10%" src="http://image.tmdb.org/t/p/w185/{{dataResult.poster_path}}" width=200 height=200>
+    </div>
+
+
+  <h2> Title of the Movie:</h2><b>{{dataResult.original_title}}</b>
+  <h2> Language: </h2><b>{{dataResult.original_language}}</b>
+   <h2>Details: </h2><b>{{dataResult.overview}}</b>
+   <h2>Release Date:</h2><b>{{dataResult.release_date}}</b>
+   <h2>Rating:</h2><b>{{dataResult.vote_average}}</b>
+
+
+</ion-card-content>
+
+</ion-content>

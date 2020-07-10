@@ -1,0 +1,27 @@
+<ion-header>
+<ion-navbar color="dark" >
+ 
+    <ion-title  >
+     Movie List
+    </ion-title>
+    
+  </ion-navbar>
+  <div color="dark"><ion-searchbar color="dark"  (ionInput)="getItems($event)"  [(ngModel)]="searchQuery" placeholder="Search..."  (ionClear)="onCancel($event)">
+  </ion-searchbar></div>
+</ion-header>
+
+
+
+<ion-content padding class="backgroundpage">
+  
+  <ion-list>
+    
+      <ion-card *ngFor="let movies of movieDetails; let valueIndex=index" (click)="next(valueIndex)">
+        <ion-card-content >
+        <img style="border-radius:10%" src="http://image.tmdb.org/t/p/w185/{{movies.poster_path}}"  >
+        <h2 class="title"> {{movies.original_title}} </h2>
+      </ion-card-content> 
+          </ion-card>
+    </ion-list>
+
+</ion-content>

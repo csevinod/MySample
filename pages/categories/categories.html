@@ -1,0 +1,30 @@
+<!--
+  Generated template for the CategoriesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>Movie Categories</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- <div class="network" *ngIf="isNetworkAvailable">
+    <br><br><br><br><br><br><br><br><br><br><br>
+      <ion-icon ios="ios-wifi" md="md-wifi"></ion-icon>
+      <h2>NO INTERNET CONNECTION</h2>
+      <p>Please check your internet connection and try again.</p>
+      <br><br>
+      <button ion-button full round color="primary" (click)=ngOnInit()>Retry</button>
+</div>
+
+
+<div *ngIf="isNetworkAvailable==false"></div> -->
+
+<ion-list *ngFor="let categories of ['Most Recent','Popular','Top-Rated'] " >
+  <ion-item color="dark" (click)="movieList(categories)"> {{categories}}</ion-item>
+</ion-list>
+
+</ion-content>
